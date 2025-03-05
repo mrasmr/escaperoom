@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Crime Escape Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: darkred;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px white;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        #clue {
+            display: none;
+            background: darkgreen;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .gif {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>A Crime Has Been Committed!</h2>
+        <img src="https://media.giphy.com/media/3o6ZsYm5t97lcUWRU8/giphy.gif" alt="Crime Scene" class="gif">
+        <p>You are a detective investigating a mysterious case. A locked box contains the next vital clue. Solve the riddle and enter the correct code to unlock it.</p>
+        
+        <img src="https://media.giphy.com/media/3o7TKP9lnP7NUWlZaw/giphy.gif" alt="Lockbox" class="gif">
+
+        <p><strong>Hint:</strong> The number you seek might be someone’s date of birth… but whose? Look around for clues.</p>
+        
+        <input type="text" id="codeInput" placeholder="Enter 6-digit code">
+        <button onclick="checkCode()">Unlock</button>
+        
+        <div id="clue">
+            <h3>Success!</h3>
+            <p>Now you have scanned me once, so you shall see,<br>
+            A hint that leads to plants and trees.<br>
+            Near the greens, where knowledge grows,<br>
+            A board stands tall—what it shows?<br>
+            Rare ones listed, unique and neat.<br>
+            Find your next clue where nature meets!</p>
+        </div>
+    </div>
+
+    <script>
+        function checkCode() {
+            let code = document.getElementById("codeInput").value;
+            if (code === "030407") {  // Updated code
+                document.getElementById("clue").style.display = "block";
+            } else {
+                alert("Wrong code! Keep investigating. 😔");
+            }
+        }
+    </script>
+
+</body>
+</html>
