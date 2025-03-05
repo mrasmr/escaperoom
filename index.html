@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Crime Escape Room</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: black;
+            font-family: 'Special Elite', cursive;
+            background-color: #001f3f;
             color: white;
             text-align: center;
             padding: 20px;
@@ -32,7 +34,7 @@
             border-radius: 5px;
             margin-top: 10px;
         }
-        .gif {
+        .image {
             width: 100%;
             max-width: 300px;
             border-radius: 10px;
@@ -44,10 +46,10 @@
 
     <div class="container">
         <h2>A Crime Has Been Committed!</h2>
-        <img src="https://media.giphy.com/media/3o6ZsYm5t97lcUWRU8/giphy.gif" alt="Crime Scene" class="gif">
+        <img src="https://source.unsplash.com/300x200/?crime,detective" alt="Crime Scene" class="image">
         <p>You are a detective investigating a mysterious case. A locked box contains the next vital clue. Solve the riddle and enter the correct code to unlock it.</p>
         
-        <img src="https://media.giphy.com/media/3o7TKP9lnP7NUWlZaw/giphy.gif" alt="Lockbox" class="gif">
+        <img src="https://source.unsplash.com/300x200/?lockbox,mystery" alt="Lockbox" class="image">
 
         <p><strong>Hint:</strong> The number you seek might be someone’s date of birth… but whose? Look around for clues.</p>
         
@@ -68,7 +70,7 @@
     <script>
         function checkCode() {
             let code = document.getElementById("codeInput").value;
-            if (code === "030407") {  // Updated code
+            if (code === "030407") {  
                 document.getElementById("clue").style.display = "block";
             } else {
                 alert("Wrong code! Keep investigating. 😔");
